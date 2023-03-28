@@ -1,0 +1,29 @@
+HTTP 
+HTTP stands for Hypertext Transfer Protocol .which is the foundation of data communication on the worldwideweb. It is a protocol used to transmit data over the internet between webservers and webclients, such as web browsers. 
+When you type a web address into your browser's address bar, your browser sends an HTTP request to the web server hosting the website. The server then responds with an HTTP response that contains the data requested, such as an HTML page, an image, or a video.
+
+HTTP1.1
+HTTP/1.1 was developed by the Internet Engineering Task Force (IETF) as an update to HTTP/1.0. The goal of HTTP/1.1 was to improve the performance of HTTP, particularly for web pages with multiple resources, such as images, scripts, and stylesheets.
+
+HTTP/2 
+HTTP/2 was developed by the Internet Engineering Task Force (IETF) as a successor to HTTP/1.1, with the goal of improving the performance and efficiency of HTTP for modern web applications.
+
+DIFFERENCE BETWEEN HTTP1.1 and HTTP2
+
+Multiplexing: In HTTP/1.1, only one request can be sent over a single connection at a time. HTTP/2, on the other hand, supports multiplexing, which allows multiple requests to be sent and received simultaneously over a single connection. This means that HTTP/2 can make more efficient use of a single connection, reducing the need to open multiple connections.
+
+Header Compression: HTTP/1.1 headers are not compressed, which can lead to significant overhead when sending requests and responses. HTTP/2 includes header compression, which reduces the size of headers by compressing them before sending them over the network. This results in faster transfer times and reduces bandwidth usage.
+
+Server Push: HTTP/2 includes a new feature called server push, which allows the server to send resources to the client before the client requests them. This can significantly reduce the time it takes for a web page to load, as the server can send resources proactively, without waiting for the client to request them.
+Binary Protocol: HTTP/1.1 uses a text-based protocol, which can be interpreted by humans, but is not very efficient for machines. HTTP/2 uses a binary protocol, which is designed to be more efficient for machines to interpret.
+
+Overall, HTTP/2 is designed to be faster and more efficient than HTTP/1.1, by addressing some of the limitations of the earlier protocol.
+Many popular e-commerce websites have transitioned to using HTTP/2, as it offers significant performance benefits for modern, large-scale web applications. 
+
+Etsy: Etsy is an online marketplace for handmade and vintage goods, and it uses HTTP/2 to provide a fast and smooth user experience for its customers.
+
+Zalando: Zalando is a European e-commerce platform that specializes in fashion and apparel, and it uses HTTP/2 to ensure fast and efficient data transfer for its customers.
+
+LATEST UPDATE
+HTTP/3 is the latest version of the Hypertext Transfer Protocol (HTTP), which is currently under development by the Internet Engineering Task Force (IETF). It is designed to improve the performance and security of HTTP/2, while also addressing some of its limitations.
+The main feature of HTTP/3 is that it uses a new transport protocol called QUIC (Quick UDP Internet Connections), instead of TCP (Transmission Control Protocol) used in HTTP/1.1 and HTTP/2. QUIC is designed to reduce latency and improve performance by providing a number of features, such as faster connection establishment, multiplexing, and stream prioritization.
