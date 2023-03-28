@@ -1,4 +1,7 @@
+Difference between HTTP1.1 vs HTTP2
+
 HTTP 
+
 HTTP stands for Hypertext Transfer Protocol .which is the foundation of data communication on the worldwideweb. It is a protocol used to transmit data over the internet between webservers and webclients, such as web browsers. 
 When you type a web address into your browser's address bar, your browser sends an HTTP request to the web server hosting the website. The server then responds with an HTTP response that contains the data requested, such as an HTML page, an image, or a video.
 
@@ -27,3 +30,43 @@ Zalando: Zalando is a European e-commerce platform that specializes in fashion a
 LATEST UPDATE
 HTTP/3 is the latest version of the Hypertext Transfer Protocol (HTTP), which is currently under development by the Internet Engineering Task Force (IETF). It is designed to improve the performance and security of HTTP/2, while also addressing some of its limitations.
 The main feature of HTTP/3 is that it uses a new transport protocol called QUIC (Quick UDP Internet Connections), instead of TCP (Transmission Control Protocol) used in HTTP/1.1 and HTTP/2. QUIC is designed to reduce latency and improve performance by providing a number of features, such as faster connection establishment, multiplexing, and stream prioritization.
+---------------------------------------------------------------------------------------------------------------------------
+
+Objects and its internal representation in Javascript
+
+Objects in Javascript 
+Object is a data type in Javascript that represents a collection of properties, where each property has a key-value pair.
+
+Internal representation of Objects in Javascript
+Understanding the internal representation of objects in JavaScript is important for writing efficient and effective code, as well as for debugging and troubleshooting issues related to objects and their properties.
+
+Object Properties: An object's properties are stored as key-value pairs, where the key is a string that identifies the property and the value can be any JavaScript data type, including other objects.
+
+Object Methods: JavaScript provides a number of built-in methods that can be used to work with objects, including Object.keys(), Object.values(), and Object.getOwnPropertyNames(). These methods are used to retrieve information about an object's properties and manipulate them.
+
+There are two syntaxes for creating objects
+1. object literal notation 
+2. constructor notation.
+
+Object Literal notation 
+ It uses curly braces {} to define an object and its properties 
+const person = {
+  name: "Suria",
+  age: 25,
+  address: {
+    street: "no 7 , and cross street",
+    city: "chennai ",
+    state: "TN"
+  }
+};
+
+Constructor notation
+Constructor notation uses the Object() constructor to create an object.
+const person = new Object();
+person.name = "Suria";
+person.age = 25;
+person.address = {
+  street: "no 7 , and cross street",
+  city: "Chennai",
+  state: "TN"
+};
