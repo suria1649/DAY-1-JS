@@ -1,0 +1,45 @@
+//TASK 1  - > comparing same JSON with different order 
+
+let obj1 = { name: "Person 1", age: 5 };
+let obj2 = { name: "Person 1", age: 5 };
+
+if (JSON.stringify(obj1) === JSON.stringify(obj2)) {
+  console.log("The objects are equal");
+} else {
+  console.log("The objects are not equal");
+}
+
+
+//TASK 2 - > displaying all countries flags in console 
+
+async function displayFlags() {
+    try {
+      const response = await fetch('https://restcountries.com/v3.1/all');
+      const data = await response.json();
+      data.forEach(country => {
+        const flagImg = document.createElement('img');
+        flagImg.src = country.flags.svg;
+        document.body.appendChild(flagImg);
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  displayFlags();
+
+  //Task 3 - > printing all countries name , region , subregion , population 
+
+async function displayCountries() {
+    try {
+      const response = await fetch('https://restcountries.com/v3.1/all');
+      const data = await response.json();
+      data.forEach(country => {
+        console.log(`Country Name: ${country.name.common}, region: ${country.region} , Subregion: ${country.subregion}, Population: ${country.population}`);
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  
+  displayCountries();
