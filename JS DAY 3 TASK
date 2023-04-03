@@ -1,0 +1,46 @@
+var suriaresume = 
+{ 
+    name : "suria" , 
+    age : "25",
+    phnum : "8072521188",
+    address : "no 7, vijayashanthi apartments, chennai 600127",
+    education : " Bachelor of Engineering",
+    designation : "Web Developer",
+    languagesknown : ["English","Tamil","Hindi"], 
+    Projectsdone : ["E-commerce website", "Ticket booking website", "Food ordering website"], 
+}; 
+ 
+//for in loop 
+
+for ( const keys in suriaresume) { 
+    console.log ( keys, suriaresume[keys]);
+} 
+
+//for each loop
+
+suriaresume.Projectsdone.forEach((value, index) => { 
+    console.log(value, index );
+}
+);
+
+//For of
+
+for (let arr of suriaresume.name) { 
+    console.log(arr);  
+}
+
+//For loop
+
+for (let str of suriaresume.name) { 
+    console.log(str);
+}
+
+var resumekeys  = Object.keys(suriaresume) ; 
+console.log(resumekeys);
+
+var resumevalues  = Object.values(suriaresume) ; 
+console.log(resumevalues);
+
+for (let i = 0 ; i<resumekeys.length; i++) { 
+    console.log(resumekeys[i],":",suriaresume[resumekeys[i]]);
+}
