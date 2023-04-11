@@ -1,0 +1,191 @@
+
+
+
+var arr = ['1','2','3','4','5','6','7','8','9','10'];
+
+
+// //1.Print odd numbers in an array
+
+var oddnumber = function(){ 
+    for (let i = 0 ; i<=arr.length -1 ; i++) {
+        
+        if(arr[i]%2 == 1 )
+        {
+            console.log(arr[i]);
+        }
+    }
+
+};
+
+oddnumber();
+
+
+
+//2.Convert all the strings to title caps in a string array
+
+
+//First letter caps
+
+let str = ['suria', 'kumar', 'guru', 'dinesh'];
+
+function FirstlettterCaps (arr) {
+
+for (let i = 0; i < arr.length; i++) {
+  let newarr = arr[i].split("");
+  newarr[0] = newarr[0].toUpperCase();
+  arr[i] = newarr.join("");
+}
+
+
+console.log(arr);
+
+}
+
+FirstlettterCaps(str);
+
+
+//all letters caps
+
+
+function allCaps(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let newarr = arr[i].split("");
+    for (let j = 0; j < newarr.length; j++) {
+      newarr[j] = newarr[j].toUpperCase();
+    }
+    arr[i] = newarr.join("");
+  }
+  console.log(arr);
+}
+
+
+allCaps(str);
+
+// //3.Sum of all numbers in an array
+
+var sum = 0;
+var sumofallnumbers = function(){
+    
+    for (let i=0; i<=arr.length-1 ; i++){
+        
+        sum = sum + parseFloat(arr[i]);
+    }
+    console.log(sum);
+};
+
+sumofallnumbers();
+
+
+//4. Return all the prime numbers in an array
+
+function Primenumbers(arr) {
+  let primes = "";
+  for (let num of arr) {
+    if (parseFloat(num) > 1) {  // only numbers greater than 1 can be prime
+      let isPrime = true;
+      for (let i = 2; i <= Math.sqrt(parseFloat(num)); i++) {
+        if (parseFloat(num) % i === 0) {
+          isPrime = false;
+          break;
+        }
+      }
+      if (isPrime) {
+        primes += parseFloat(num) + " ";
+      }
+    }
+  }
+  console.log(primes);
+}
+
+let myarray = [1, 3, 5,7,9,11,12,14,45,422,434,45,2,445,67];
+
+Primenumbers(myarray); 
+
+
+//5.Return all the palindromes in an array
+
+function palindrome(arr) {
+  let result = "";
+  for (let str of arr) {
+    let reversestr = str.split("").reverse().join("");
+    if (reversestr === str) {
+      result += str + " ";
+    }
+  }
+  console.log(result);
+}
+
+let strings = ["racecar", "hello", "deified", "world", "level", "goodbye"];
+
+palindrome(strings);
+
+
+//6. Return median of two sorted arrays of the same size.
+
+function median(arr1,arr2)  { 
+    
+arr1 = arr1.sort(); 
+arr2 = arr2.sort();
+
+if(arr1.length == arr2.length){ 
+
+let mergedarr =  [...arr1, ...arr2]; 
+
+let median = mergedarr[mergedarr.length / 2]; 
+
+console.log(median);
+}
+else{
+    console.log("The size of sample arrays are not same");
+} 
+    
+}
+
+
+
+const arry1 = [1, 2, 3];
+const arry2 = [4, 5, 6];
+
+median (arry1,arry2);
+
+
+//7.Remove duplicates from an array
+
+
+function removeDuplicates(arr) {
+  let newArray = [];
+  
+  for (let i = 0; i < arr.length; i++) {
+    let isDuplicate = false;
+    
+    for (let j = 0; j < newArray.length; j++) {
+      if (arr[i] === newArray[j]) {
+        isDuplicate = true;
+        break;
+      }
+    }
+    
+    if (!isDuplicate) {
+      newArray.push(arr[i]);
+    }
+  }
+  
+  console.log(newArray);
+}
+
+let myArray = [1, 2, 2, 3, 4, 4, 5];
+
+removeDuplicates(myArray);
+
+
+//8. Rotate an array by k times
+
+
+function rotate(arr, k) {
+  for (let i = 0; i < k; i++) {
+    arr.unshift(arr.pop());
+  }
+  console.log(arr);
+}
+
+rotate(myArray, 2);
